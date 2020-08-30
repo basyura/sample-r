@@ -13,6 +13,8 @@ desig.ort <- caFactorialDesign(
 )
 
 # 仮想のテスト結果データの読み込み
-web.test.data <- read.csv("https://gihyo.jp/assets/files/book/2016/978-4-7741-8360-2/download/web_test_sample.csv", header = T)
+base <- "https://gihyo.jp/assets/files/book/2016/978-4-7741-8360-2/download/"
+url <- paste(base, "web_test_sample.csv", sep = "")
+web.test.data <- read.csv(url, header = T)
 # 上位6件だけ表示
 head(web.test.data)
